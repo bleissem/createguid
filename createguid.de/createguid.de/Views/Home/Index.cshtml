@@ -1,7 +1,30 @@
-﻿
-@{
-    ViewBag.Title = "Index";
-}
+﻿ @model createguid.de.Models.HomeModel
 
-<h2>@Guid.NewGuid().ToString().ToUpper()</h2>
+
+<p>
+    <h2>@Model.Guid.ToString().ToUpper()</h2>
+</p>
+<p>
+    <h2>&#123;@Model.Guid.ToString().ToUpper()&#125;</h2>
+</p>
+<!-- 
+<p>
+    <button type="button" id="myButton" data-loading-text="Loading..." class="btn btn-primary" autocomplete="off">
+        Loading state
+    </button>
+
+
+<script>
+    $('#myButton').click(function () {
+        var $btn = $(this).button('loading')
+
+        alert('Hello');
+        $btn.button('reset')
+    })
+   
+</script>
+
+</p>
+
+-->
 

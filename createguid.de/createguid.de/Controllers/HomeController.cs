@@ -1,4 +1,5 @@
-﻿using System;
+﻿using createguid.de.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,9 @@ namespace createguid.de.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            return View();
+            HomeModel model = new HomeModel();
+            model.Guid = Guid.NewGuid();
+            return View(model);
         }
     }
 }
